@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Savir's Cells Project 2021</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lightblue; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightblue; 
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  text-align: center;
+  list-style: inside;
+}
+
+</style>
+</head>
+<body>
+
+<small><center><img height="100" src="icon.png" alt="Savir's Brain"></center></small>
+
+<center><h1>Savir's Cells Project 2021 (Website)</h1></center>
+<center><p>Nervous System/Alzheimer's Disease</p></center>
+
+<br>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="slide1.png" style="width:100%">
+  <div class="text">Slide 1</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="slide2.png" style="width:100%">
+  <div class="text">Slide 2</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slide3.png" style="width:100%">
+  <div class="text">Slide 3</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 6400); // Change image every 2 seconds
+}
+</script>
+
+<br>
+
+<center><h2>How does the nervous system work?</h2></center>
+
+<center><p style="width: 60%">The nervous system, consisting of the brain (and brain cells), spinal cord, sensory organs, and the nerves, takes in information through our senses, processes the information and triggers reactions, such as making your muscles move or causing you to feel pain. You might wonder: <b>Why is feeling pain important? How does it help me?</b> Well, feeling pain is important. For example, if you get burnt by a stove, and don't feel pain, you would never know about it - and burn completely!</p></center>
+
+
+<br>
+
+<center><h2>About Alzheimer's Disease</h2></center>
+
+<center><p style="width:60%">Alzheimer's Disease is a disease affecting the nervous system, said to be caused by an abnormal build-up of proteins in and around someone's brain cells. It has several symptoms/effects, which are outlined later on. It is also the most common type of dementia.</p></center>
+
+<br>
+
+<center><img src="image1.png" alt="Alzheimer's Disease"></center>
+
+<br>
+
+<center><h2>Who does it affect?</h2></center>
+<center><p style="width: 60%">Alzheimer's Disease is a disease affecting mainly the elderly. It is most common in people over the age of 65, and the risks of all types of dementia increase with age. Alzheimer's Disease affects an estimated 1 in 14 (approx. 7%) people over the age of 65 and about 1 in 6 (approx. 17%) people over 80.</p></center>
+
+<center><h2>Alzheimer's Disease Symptoms</h2></center>
+
+<center><p>Alzheimer's disease has several symptoms including:</p></center>
+
+<center><ul>
+  <li>Increased memory loss/confusion</li>
+<br>
+  <li>Difficulty organizing thoughts and thinking logically</li>
+<br>
+  <li>Inappropriate outbursts of anger</li>
+<br>
+  <li>Restlessness, agitation, anxiety, tearfulness, wandering—especially in the late afternoon or evening</li>
+<br>
+  <li>Repetitive statements or movement, occasional muscle twitches</li>
+<br>
+  <li>Short attention span</li>
+<br>
+  <li>Difficulty carrying out multistep tasks, such as getting dressed</li>
+<br>
+  <li>Problems recognizing family and friends</li>
+<br>
+  <li>Hallucinations, delusions, and paranoia</li>
+<br>
+  <li>Impulsive behavior such as undressing at inappropriate times or places or using vulgar language</li>
+<br>
+  <li>Inability to learn new things</li>
+<br>
+  <li>Difficulty with language and problems with reading, writing, and working with numbers</li>
+<br>
+  <li>Increased sleeping</li>
+<br>
+  <li>Forgetful</li>
+<br>
+<br>
+</ul></center>
+
+<center><h2>Alzheimer's Disease Cause</h2></center>
+
+<center><p  style="width:60%">Alzheimer's Disease is said to be caused by an abnormal amount of proteins in and around a person's brain cells. One of two major proteins involved, amyloid deposits of which form plaques around the cells. The other major protein involved is known as tau, deposits of which form tangles inside the brain cells. Although the precise cause for this activity to start is unknown, scientists have discovered that this starts to happen several years before symptoms develop.</p></center>
+
+<br>
+
+<center><h2>Alzheimer's Disease Prevention</h2></center>
+<center><p>There are several measures you can take to prevent Alzheimer's Disease. Some include:</p></center>
+<center><ul>
+  <li>Don't Smoke</li>
+<br>
+  <li>Consume little to no alcohol</li>
+<br>
+  <li>If you have diabetes, stick to diet and take medication</li>
+<br>
+  <li>Exercise for a minimum of 150 minutes a week (2.5 hours)</li>
+<br>
+  <li>Take health tests regularly</li>
+<br>
+  <li>Read</li>
+<br>
+  <li>Learn new languages</li>
+<br>
+  <li>Play/listen to music</li>
+<br>
+  <li>Maintain an active social life</li>
+<br>
+  <li>Develop hobbies</li>
+<br>
+  <li>Volunteer</li>
+<br>
+  <li>Take part in group activities</li>
+<br>
+<img src="nosmoke.png" alt="No Smoking">
+<br>
+<img src="music.jpg" alt="Music">
+<br>
+</ul></center>
+
+<br>
+
+<center><h2>Alzheimer's Disease Treatment</h2></center>
+
+<center><p  style="width:60%">Certain medications, known as cholinesterase inhibitors are prescribed for mild to moderate Alzheimer's Disease. These drugs usually help to reduce the severity of symptoms and help to reduce behavioural changes. These medications include:</p></center>
+
+<center><ul>
+  <li>Donepezil (sold as Aricept®)</li>
+<br>
+  <li>Galantamine (sold as Razadyne®)</li>
+<br>
+  <li>Rivastigmine (sold as Exelon®)</li>
+<br>
+</ul></center>
+<center><p>Patients suffering from Alzheimer's disease are also advised to use methods to prevent it.</p></center>
+<br>
+
+<center><h2>Take a Peak Inside Alzheimer's Disease</h2></center>
+
+<center><input id="myBtn" type="image" src="vidpic.png" /></center>
+
+<br>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <center><p>Alzheimer's Disease YouTube Video:	</p></center>
+    <center><iframe width="880" height="600" src="https://www.youtube.com/embed/zTd0-A5yDZI" title="YouTube video player" frameborder="800"></iframe></center>
+    <center><p>Link: </p><a style="color: green" target="_blank" href="https://www.youtube.com/watch?v=zTd0-A5yDZI">https://www.youtube.com/watch?v=zTd0-A5yDZI</a>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<br>
+
+<hr>
+
+<center><h2>Summary</h2</center>
+
+<center><p style="width: 60%">In conclusion, a healthy nervous system can be affected by Alzheimer's Disease due to an abnormal build-up of proteins in and around a person's brain cells, and although the cause for this activity to start is unknown, there are several measures you can take to prevent this disease, which mostly occurs in people over the age of 65, and there are many treatments and unique symptoms.</p></center>
+
+<br>
+
+<hr>
+<center><h2>Bibliography</h2></center>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.nia.nih.gov/health/what-are-signs-alzheimers-disease">https://www.nia.nih.gov/health/what-are-signs-alzheimers-disease</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.nhs.uk/conditions/alzheimers-disease/prevention/">https://www.nhs.uk/conditions/alzheimers-disease/prevention/</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.cdc.gov/aging/aginginfo/alzheimers.htm">https://www.cdc.gov/aging/aginginfo/alzheimers.htm</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.alz.org/alzheimers-dementia/what-is-alzheimers">https://www.alz.org/alzheimers-dementia/what-is-alzheimers</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.youtube.com/watch?v=zTd0-A5yDZI">https://www.youtube.com/watch?v=zTd0-A5yDZI</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.nia.nih.gov/health/how-alzheimers-disease-treated#:~:text=Medications%20called%20cholinesterase%20inhibitors%20are,and%20Aricept%C2%AE%20(donepezil).">https://www.nia.nih.gov/health/how-alzheimers-disease-treated#:~:text=Medications%20called%20cholinesterase%20inhibitors%20are,and%20Aricept%C2%AE%20(donepezil).</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.nhs.uk/conditions/alzheimers-disease/#:~:text=Alzheimer's%20disease%20is%20most%20common,over%20the%20age%20of%2080.">https://www.nhs.uk/conditions/alzheimers-disease/#:~:text=Alzheimer's%20disease%20is%20most%20common,over%20the%20age%20of%2080.</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://www.mdpi.com/molecules/molecules-25-05789/article_deploy/html/images/molecules-25-05789-g001.png">https://www.mdpi.com/molecules/molecules-25-05789/article_deploy/html/images/molecules-25-05789-g001.png</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/No_Smoking.svg/1200px-No_Smoking.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/No_Smoking.svg/1200px-No_Smoking.svg.png</a></center>
+
+<br>
+
+<center><a style="color: green; width:60%" target="_blank" href="https://media.istockphoto.com/vectors/signs-of-a-musical-notation-vector-id941501236?k=6&m=941501236&s=612x612&w=0&h=KTx4KW2Sk61NDKqnq6e_eEyUV4TJd2OkJV_Z1PmZ9bc=">https://media.istockphoto.com/vectors/signs-of-a-musical-notation-vector-id941501236?k=6&m=941501236&s=612x612&w=0&h=KTx4KW2Sk61NDKqnq6e_eEyUV4TJd2OkJV_Z1PmZ9bc=</a></center>
+
+<br>
+<br>
+
+</body>
+</html> 
